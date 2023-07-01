@@ -1,0 +1,26 @@
+---
+layout: post
+title: Using potentials for protein structure prediction
+categories: Computer Vision
+tags:
+mathjax: true
+comments: true
+---
+
+(From [Senior et al, 2020](https://www.nature.com/articles/s41586-019-1923-7))
+>"Here we show that we can train a neural network to make accurate predictions of the distances between a pair of residues, which convey more information about the structure than contact predictions. Using this information, we construct a potential of mean force that can accurately describe the shape of a protein. We find that the resulting potential can be optimized by simple gradient descent algorithm to generate structures without complex sampling procedures."
+
+In CASP13 (organized in the year 2018), Senior et al were one of the 97 teams to submit 5 predictions for the 84 evaluation protein sequences. These protein sequences were further categorized as one of template-based (for which homologous sequences for which the 3d structure is known, can serve as a starting point and be modified based upon sequence differences) or free-modeling (for which no homologous sequences are available, also called as *de novo* modeling). The predicted structures are compared with the GT structures available for the evaluation sequences (but not accessible to the participants) using the TM metric. This metric lies between 0 and 1, with 1 indicating a perfect match. AlphaFold showed dominance especially in the Free Modeling category. 
+
+According to the authors, by predicting a continuous distance map instead of a discrete contact map, AlphaFold is able to exceed performance in the FM category. Contacts are defined when the $\beta$ carbon atoms of 2 residues are within 8 Angstrom distance. The key idea to keep in mind which is well explained by Prof. Senior [here](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&list=WL&index=14&t=2927s) at 5:30 is that they concern themselves with modeling the 3d structure of the backbone of the protein sequence. Each protein is represented as a triad of atoms N-C-C where the central C atom is called as C-alpha and the side chain attached to it is called C-beta. One way of representing this is through torsion angles. Senior introduces a $\phi$ and a $\psi$ angle which need to be estimated per N-C-C residue. (He also mentions an $\omega$ angle which is set to 1 in the model). In essence, the problem of finding the 3d structure of an input protein sequence with $N$ residues boils down to the question of estimating these $2N$ parameters. Once one has access to this, then one can estimate the distance between any two residues in the protein since the distance is parameterised as a function of these $2N$ values. Despite this, during training, the goal is to learn the mapping between the provided input sequence and a distogram - which is essentially a distance matrix, indicating pair-wise distances between all residues in the input sequence and additionally also learn the mapping to the $2N$ angular parameters. During inference, these predicted pairwise distances are combined with the predicted angular outputs to obtain the final 3D structure. 
+
+Interestingly though, in reality the model does not predict the absolute distances and the angles but rather the discretized probability of distances and angles. I guess the authors do this to quantify the model uncertainty? How are these probability of a pairwise distance transformed to the final, absolute float distance in the distogram for protein structure prediction is not clear to me yet!
+ 
+(From [Jumper et al, 2021](https://www.nature.com/articles/s41586-021-03819-2))
+>"The development of computational methods to predict 3D protein structures from the protein sequence has proceeded along two complementary paths that focus on either the physical interactions or the evolutionary history. The physical interaction programme heavily integrates our understanding of molecular driving forces into either thermodynamic or kinetic simulation of protein physics or statistical approximations thereof. Although theoretically very appealing, this approach has proved highly challenging for even moderate-sized proteins due to the computational intractability of molecular simulation, the context dependence of protein stability and the difficulty of producing sufficiently accurate models of protein physics. The evolutionary programme has provided an alternative in recent years, in which the constraints on protein structure are derived from bioinformatics analysis of the evolutionary history of proteins, homology to solved structures and pairwise evolutionary correlations"
+
+The authors of Alpha Fold 2 state that before the advent of DL into protein structrure prediction, often physical models which relied on thermodynamic or kinetic modeling of protein physics were used to infer the 3D structure; or evolutionary history of proteins, homolofy to *solved* proteins and pairwise evolutionary correlations were used to define constraints for identifying the underlying  protein structure. This second approach, the authors say, has benefitted from a large number of proteins and their structure being databased in the recent years, and and with the advancement of DL to identify correlations. 
+
+
+
+
