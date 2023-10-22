@@ -16,4 +16,6 @@ The authors define a continuous bijective mapping $T_{i}$ that maps 3D points $x
 
 >"Note that the canonical coordinate u is time independent and can be viewed as a globally consistent index for a particular scene point or 3D trajectory across time".
 
-:
+What is confusing to me at the outset is how is the mapping between the 2d space and the 3d space ensured to be a bijection? Bijection implies that the two sets being mapped have the same number of elements axiomatically, but shouldn't the 3d space always have more number of points than the 2d space?
+
+
