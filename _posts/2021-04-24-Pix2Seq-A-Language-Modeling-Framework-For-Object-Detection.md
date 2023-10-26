@@ -21,4 +21,4 @@ I wonder if this can be extended to the task of tracking, where given an initial
 
 One issue I see with this strategy is that since all tracklets have different lengths, then one might need to condition the prediction of the next token on a varying number of previous images. But maybe this can be approximated by conditioning on a time window of fixed length. 
 
-The benefit of introducing language modeling in the context of cell tracking is that each token or object can attend to objects at much later time points. This is typiocally missing in approaches which rely on predicting flow between consecutive pair of frames.
+The benefit of introducing language modeling in the context of cell tracking is that each token or object can attend to objects at much later time points. This is typically missing in approaches which rely on predicting flow between consecutive pair of frames.
