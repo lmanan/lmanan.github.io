@@ -18,4 +18,4 @@ The authors define a continuous bijective mapping $T_{i}$ that maps 3D points $x
 
 What is confusing to me at the outset is how is the mapping between the 2d space and the 3d space ensured to be a bijection? Bijection implies that the two sets being mapped have the same number of elements axiomatically, but shouldn't the 3d space always have more number of points than the 2d space?
 
-
+At the beginning as I read the paper, it appeared as if there were multiple neural networks - one of each frame - which are being trained to go from the 3d space to the color and density. But that is not true - essentially each of these mappings per frame require a latent code as input which is unique for each frame.
