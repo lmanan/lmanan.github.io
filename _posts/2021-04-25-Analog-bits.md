@@ -22,3 +22,7 @@ This is highlighted in the followup work called Pix2Seq-D by [Chen et al, 2023](
 <p><figure><img src="/images/2021-04-25/pix2seq-d.png" alt=""/></figure></p>
 
 Similar to Pix2Seq, in Pix2Seq-D, the authors model the likelihood of the mask conditioned on the current image. This can be extended to the task of tracking by also conditioning on the previous image which has the consequence of generating labels which are consistent across time (i.e. what is desired for object tracking).
+
+In this work, the authors say that since instance IDS can be permuted without changing the underlying instances, they randomly assign integers in $[0, K]$ to instances each time an image is sampled during training. Here, $K$ is the maximum number of instances allowed in any image.
+
+Then to solve the instance segmentation problem, they simply learn an image conditional mask generation model by maximising $\Sum_{i} \math{log} P(m_{i} | x_{i}$. 
