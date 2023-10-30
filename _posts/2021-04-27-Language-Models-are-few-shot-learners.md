@@ -26,3 +26,7 @@ Kirillov et al, 2023 take this idea forward to the domain of computer vision and
 
 I find the statement above interesting - that even when a prompt is ambiguous, the output should be a reasonable mask for at least one of the objects. I wonder how is this implemented in practice? 
 
+>"With one output, the model will average multiple valid masks if given an ambiguous prompt. To address this, we modify the model to predict multiple output masks for a single prompt. We found 3 masks is sufficient to address most common use cases (nested masks are often at most three deep: whole, part and subpart). During training, we backprop only the minimum loss over masks. To rank masks, the model predicts a confidence score (i.e. estimated IoU) for each mask."
+
+Backpropping just the minimum loss looks intriguing. Also, although for natural images, predicting three masks is good, maybe not for biological images, where you can access a hierarchy of scales. Do they have three duplicate instance masks for each object during training. If so, how are these ranked or in which order are they presented to the model?
+
