@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CaDeX: learning canonical deformation coordinate space for dynamic surface representation via neural homomorphism
+title: CaDeX - Learning canonical deformation coordinate space for dynamic surface representation via neural homomorphism
 categories: Computer Vision
 tags:
 mathjax: true
