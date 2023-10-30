@@ -24,5 +24,5 @@ Kirillov et al, 2023 take this idea forward to the domain of computer vision and
 
 >"The requirement of a valid output mask means that even when a prompt is ambiguous and could refer to multiple objects, the output should be a reasonable mask for at least one of those objects. We use the promptable segmentation task as both a pre-training objective and to solve general downstream segmentation tasks via prompt engineering."
 
-
+I find the statement above interesting - that even when a prompt is ambiguous, the output should be a reasonable mask for at least one of the objects. I wonder how is this implemented in practice? 
 
