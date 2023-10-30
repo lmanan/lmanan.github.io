@@ -30,3 +30,6 @@ I find the statement above interesting - that even when a prompt is ambiguous, t
 
 Backpropping just the minimum loss looks intriguing. Also, although for natural images, predicting three masks is good, maybe not for biological images, where you can access a hierarchy of scales. Do they have three duplicate instance masks for each object during training. If so, how are these ranked or in which order are they presented to the model?
 
+Say if one was building a foundation model for tracking, what would be suitable prompts? Maybe a few clicks on the same object across time would be akin to the one shot task? Maybe highlighting two or more tracklets by clicks would be akin to the few shot task?
+
+
