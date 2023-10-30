@@ -13,7 +13,7 @@ From [Lei and Daniilidis, 2022](https://arxiv.org/abs/2203.16529)
 The authors say that the desired dynamic representation needs to capture the reference shape and the consistent deformation between any pair. Typically, this is addressed by using any one of the frames as the canonical frame but the authors critique this approach by saying that it complicates the shape prior. Another approach is to calculate an approximate mean, but that can limit the shape expressibility. 
 
 They propose a generic modeling framework. Specifically, it is described as follows. Consider a continuous, bijective mapping (homeomorphism) $H_{i}: R^{3} - R^{3}$ at time $t_{i}$ that maps each deformed coordinate to its global 3d coordinate.
-Note that this global 3d coordinate has no time index and can be seen as a global consistent indicator of each correspondence trajectory across time. This $uvw$ space is referred to as CadeX by the authors.
+Note that this global 3d coordinate has no time index and can be seen as a global consistent indicator of each correspondence trajectory across time. This $uvw$ space is referred to as CaDeX by the authors.
 
 $$
 [x^{j}, y^{j}, z^{j}] = F_{ij}([x^{i}, y^{i}, z^{i}]) = H^{-1}_{j} \circ H_{i}([x^{i}, y^{i}, z^{i}]).
