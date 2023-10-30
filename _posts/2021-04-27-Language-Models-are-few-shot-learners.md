@@ -13,3 +13,6 @@ From [Brown et al, 2020](https://arxiv.org/abs/2005.14165)
 The authors state that humans can perform language tasks from only a few examples or from simple instructions. Previous approaches required pretraining on a large corpus of text and then fine tuning on a specific task. In contrast, trained large language models are better at few shot tasks. The figure paper taken from their paper gives a nice distinction between zero shot, one shot and few shot tasks. 
 <p><figure><img src="/images/2021-04-27/few-shot.png" alt=""/></figure></p>
 
+In the Segment Anything [paper](https://arxiv.org/pdf/2304.02643.pdf) use this as inspiration. From Kirillov et al, 
+
+>"When scaled and trained with abundant corpora from the web, these models' zero and few shot performance compares well to fine-tuned models. Empirical trends show this behaviour improving with model scale, dataset size and total training compute."
