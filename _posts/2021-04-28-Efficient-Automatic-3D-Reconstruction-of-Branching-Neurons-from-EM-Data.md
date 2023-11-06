@@ -15,5 +15,9 @@ The authors proposed a strategy for performing 3d neuron instance segmentation -
 
 >"Therefore, we propose to extract a set of possible connected components that might represent neuron sections. These connected components, that we will call segmentation hypotheses in the following, are allowed to overlap and thereby contradict each other. Thus, we increase the scale of ambiguity from pixels to larger regions. It remains to find consistent subsets of segmentation hypotheses. We show how this can be done with consideration of all slices at once."
 
+In order to reduce the number of hypotheses, the authors give preference to having larger segmentations and discard hypotheses if a node has only one leaf. 
 
+>"To reduce the number of segmentation hypotheses, we propose to discard segmentation hypotheses that are already well represented by others and do not introduce a new interpretation of the image. In particular, we are not interested in only children of the component trees , i.e., components that are the only child of their parent. These segmentation hypotheses are the only subset of their parent and therefore carry the same information on a smaller set of pixels. In other words, if there are different conflicting segmentation hypotheses with the same topological properties, we choose the consider the biggest one only."
+
+<p><figure><img src="/images/2021-04-28/neuron.png" alt=""/></figure></p>
 
