@@ -19,5 +19,5 @@ In order to reduce the number of hypotheses, the authors give preference to havi
 
 >"To reduce the number of segmentation hypotheses, we propose to discard segmentation hypotheses that are already well represented by others and do not introduce a new interpretation of the image. In particular, we are not interested in only children of the component trees , i.e., components that are the only child of their parent. These segmentation hypotheses are the only subset of their parent and therefore carry the same information on a smaller set of pixels. In other words, if there are different conflicting segmentation hypotheses with the same topological properties, we choose the consider the biggest one only."
 
-<p><figure><img src="/images/2021-04-28/neuron.png" alt=""/></figure></p>
+<p><figure><img src="../images/2021-04-28/neuron.png" alt=""/></figure></p>
 
