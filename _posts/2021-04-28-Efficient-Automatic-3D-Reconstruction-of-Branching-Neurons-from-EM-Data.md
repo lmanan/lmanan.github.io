@@ -45,7 +45,7 @@ One could potentially normalize the costs above. For example,
 
 
 $$
-c^{i \rightarrow j,k} := 2\frac{\big\lVert |I| - \overline{|J| + |K|}i\big\rVert}{|I| + |J| + |K|}, 
+c^{i \rightarrow j,k} := 2\frac{\big\lVert |I| - \overline{|J| + |K|}\big\rVert}{|I| + |J| + |K|}, 
 $$
 
 
