@@ -29,7 +29,7 @@ $$
 c^{i \rightarrow j,k} := (|I| - (|J| + |K|))^{2}, 
 $$
 
-where $|I|$ denotes the number of pixels in the $i^{th}$ segmentation hypothesis and $c^{i \rightarrow j, k}$ indicates the cost of $i^{th}$ segmentation hypothesis splitting to give $j^{th}$ and $k^{th}$ segmentation hypotheses. Similarly, one could define a merging cost.
+where $c^{i \rightarrow j, k}$ indicates the cost of $i^{th}$ segmentation hypothesis splitting to give $j^{th}$ and $k^{th}$ segmentation hypotheses. Similarly, one could define a merging cost.
 
 Since the mitosis should be defined differently to distinguish from a splitting event, maybe one could conserve mass? 
 If we define $F_{i}$ as the intensity of the set of pixels belonging to the $i^{th}$ segmentation hypothesis, then
