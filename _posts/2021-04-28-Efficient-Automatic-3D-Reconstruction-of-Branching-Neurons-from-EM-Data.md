@@ -21,3 +21,19 @@ In order to reduce the number of hypotheses, the authors give preference to havi
 
 <p><figure><img src="../images/2021-04-28/neuron.png" alt=""/></figure></p>
 
+The authors use two sets of constraints - (i) every pixel should be assigned to only one label (hypothesis consistency constraint) and (ii) a segmentation hypothesis which was picked from an assignment to a previous slice will also be picked by an assignment to the next slice (explanation consistency constraint), since it ensures a continuous sequence of assignments 
+
+I wonder if this would be extended for the task of tracking, what formulation is needed to enumerate the merging, splitting, mitosis etc. Maybe splitting cost could conserve volume, i.e.
+
+$$
+c^{i \rightarrow j,k} := (s_{i} - (s_{j} + s_{k}))^{2}, 
+$$
+
+where $s_{i}$ denotes the number of pixels in the $i^{th}$ hypothesis and $c^{i \rightarrow j, k} indicates the cost of $i^{th}$ hypothesis splitting to give $j^{th}$ and $k^{th}$ hypotheses. Similarly, one could define a merging cost.
+
+Since the mitosis should be defined differently to distinguish from a splitting event, maybe one could conserve mass?
+
+$$
+c_{m}^{i \rightarrow j,k} := (I_{i}s_{i} - (I_{j}s_{j} + I_{k}s_{k}))^{2}, 
+$$
+
