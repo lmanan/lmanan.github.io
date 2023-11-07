@@ -26,7 +26,7 @@ The authors use two sets of constraints - (i) every pixel should be assigned to 
 I wonder if this would be extended for the task of tracking, what formulation is needed to enumerate the merging, splitting, mitosis etc. Maybe splitting cost could conserve volume. If we define $I$ as the set of pixels belonging to the $i^{th}$ segmentation hypothesis, then
 
 $$
-c^{i \rightarrow j,k} := (|I| - (|J| + |K|))^{2}, 
+c^{i \rightarrow j,k} := (|I| - \overline{|J| + |K|})^{2}, 
 $$
 
 where $c^{i \rightarrow j, k}$ indicates the cost of $i^{th}$ segmentation hypothesis splitting to give $j^{th}$ and $k^{th}$ segmentation hypotheses. Similarly, one could define a merging cost.
@@ -35,7 +35,7 @@ Since the mitosis should be defined differently to distinguish from a splitting 
 If we define $F_{i}$ as the intensity of the set of pixels belonging to the $i^{th}$ segmentation hypothesis, then
 
 $$
-c_{m}^{i \rightarrow j,k} := (\sum F_{i} - (\sum F_{j} + \sum F_{k}))^{2}, 
+c_{m}^{i \rightarrow j,k} := (\sum F_{i} - \overline{\sum F_{j} + \sum F_{k}})^{2}, 
 $$
 
 
