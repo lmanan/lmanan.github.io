@@ -29,7 +29,7 @@ $$
 c^{i \rightarrow j,k} := (|I| - (|J| + |K|))^{2}, 
 $$
 
-where $s_{i}$ denotes the number of pixels in the $i^{th}$ hypothesis and $c^{i - j, k} indicates the cost of $i^{th}$ hypothesis splitting to give $j^{th}$ and $k^{th}$ hypotheses. Similarly, one could define a merging cost.
+where $s_{i}$ denotes the number of pixels in the $i^{th}$ hypothesis and $c^{i \rightarrow j, k}$ indicates the cost of $i^{th}$ hypothesis splitting to give $j^{th}$ and $k^{th}$ hypotheses. Similarly, one could define a merging cost.
 
 Since the mitosis should be defined differently to distinguish from a splitting event, maybe one could conserve mass? If we define $F_{i}$ as the intensity of the set of pixels belonging to the $i^{th}$ segmentation hypothesis
 
@@ -37,4 +37,4 @@ $$
 c_{m}^{i \rightarrow j,k} := (\sum F_{i} - (\sum F_{j} + \sum F_{k}))^{2}
 $$
 
-These costs are non-learnt. If we have some suprevision, then better features and costs can be framed. 
+These costs are non-learnt. If we have some supervision in the form of manually annotated lineage trees, then better features and costs can be framed. 
