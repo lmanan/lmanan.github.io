@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boundary IoU: Improving Object-Centric Image Segmentation Evaluation 
+title: Boundary IoU Improving Object-Centric Image Segmentation Evaluation 
 categories: Computer Vision
 tags:
 mathjax: true
