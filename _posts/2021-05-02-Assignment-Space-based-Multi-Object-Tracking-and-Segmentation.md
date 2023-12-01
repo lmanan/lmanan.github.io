@@ -14,4 +14,12 @@ Choudhuri et al state that performing a global optimization considering detectio
 
 <p><figure><img src="/images/2021-05-02/top-k.png" alt=""/></figure></p>
 
+I find the use of structured learning to figure out the weights used in determining the cost of assigning a detection at $t-1$ to a detection a t $t$ interesting (this cost is usually expressed as a convex sum of appearance, iou and distance) . More specifically, 
+
+$$
+c(d_{i}^{t-1}, d_{j}^{t}) = \lambda_{\text{iou}} f_{\text{iou}} (d_{i}^{t-1}, d_{j}^{t}) + \lambda_{\text{app}} f_{\text{app}} (d_{i}^{t-1}, d_{j}^{t}) + \lambda_{\text{dis}} f_{\text{dis}} (d_{i}^{t-1}, d_{j}^{t})
+$$
+
+
+
 
