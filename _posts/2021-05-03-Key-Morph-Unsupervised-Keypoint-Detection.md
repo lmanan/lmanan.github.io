@@ -23,3 +23,5 @@ In [KeyMorph](https://openreview.net/pdf?id=OrNzjERFybh), the authors propose an
 
 <p><figure><img src="/images/2021-05-03/keymorph-qualitative.png" alt=""/></figure></p>
 
+They state that existing approaches for registration use neural networks to output transformation parameters or a dense field which aligns them. Since the registration step is done in a single step, using DNNs is substantially faster than iterative approaches. However, these approaches fail when given a large misalignment. Secondly, they state that existing approaches lack interpretability as they output transformation parameters but provide little insight into what drives the transformation. With KeyMorph, they address both the issues above i.e. they show the method performing well even under large rotations, shifts and translations. Additionally, the method produces keypoints and is therefore quite interpretable as to what caused the specific transfromation.
+
