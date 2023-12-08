@@ -18,3 +18,8 @@ The authors instead directly predicting the coordinates of the keypoint during t
 $$
 x_{kp} = \frac{1}{J \times K} \frac{\sum^{H}_{i=1} I_{ijk} i}{\sum^{H}_{i=1} i}
 $$
+
+In [KeyMorph](https://openreview.net/pdf?id=OrNzjERFybh), the authors propose an approach to perform registration using unsupervised keypoint detection. Here below are some qualitative results:
+
+<p><figure><img src="/images/2021-05-03/keymorph-qualitative.png" alt=""/></figure></p>
+
