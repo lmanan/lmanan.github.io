@@ -16,5 +16,5 @@ Ma et al propose a new architecture for detecting keypoints. Normally this is do
 The authors instead directly predicting the coordinates of the keypoint during training. This is done by having a center of mass layer which weighs the x, y and z coordinates. The weights are the value of the image predicted in the penultimate layer. In my understanding, this means that:
 
 $$
-x_{kp} = \frac{1}{J \times K} \frac{\sum^{H}_{i=1} I_{ijk} i}{\sum^{H}_{i=1}}
+x_{kp} = \frac{1}{J \times K} \frac{\sum^{H}_{i=1} I_{ijk} i}{\sum^{H}_{i=1} i}
 $$
