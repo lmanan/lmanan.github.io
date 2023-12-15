@@ -15,4 +15,4 @@ Safaie et al, 2023 wonder how animals of the same species demonstrate similar be
 
 >"The same behaviour performed by two individuals could be produced by preserved latent dynamics. ... We posit that preserved circuit constraints give rise to a species wide neural landscape and the individual specific latent dynamics are different instantiations of a common trajectory through this landscape."
 
-Essentially they hypothesize that in the latent space, the dynamic trajectory seen would be the same across different individuals."
+Essentially they hypothesize that in the latent space, the dynamic trajectory seen would be the same across different individuals. Here, by latent they refer the calculated embedding which results by performing a CCA on teh enrual recordings.  
