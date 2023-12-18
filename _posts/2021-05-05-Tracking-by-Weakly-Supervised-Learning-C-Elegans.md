@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-(From [Hirsch et al, 2022](ihttps://openreview.net/forum?id=icUFpH3Dq6e))
+(From [Hirsch et al, 2022](https://openreview.net/forum?id=icUFpH3Dq6e))
 >"Linajea implements a 4d U-Net to predict the position and movement of each nucleus. Position is encoded as a single channel image of Gaussian shaped blobs, one per nucleus. The locations of the respective intensity maxima correspond to nuclei center points. Movement is encoded as 3d vectors per pixel within a nucleus. Each vector points to the spatial location of the same nucleus in the previous time frame. The four output channels necessary for the above encoding are trained jointly via L2 loss."
 
 Hirsch et al build upon Linajea, where a 4d convolutional network was used to learn position and movement per nucleus. I found it interesting that this was treated as a 4d problem and not a 3d+channel problem - for example, naively one could consider the volumes across the time dimension to be concatenated as channels. The disadvantage of doing this would be that since the contribution from various channels would be merged, one wouldn't be able to pinpoint the location of each cell if it has moved between time points. 
