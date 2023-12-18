@@ -14,6 +14,8 @@ Rombach et al argue that one can train diffusion models in a latent space, inste
 
 >"Our perceptual compression model is based on previous work and consists of an autoencoder trained by combination of a perceptual loss and a patch based adversarial objective. This ensures that the reconstructions are confined to the image manifold by enforcing local realism and avoids blurriness introduced by relying solely on pixel-space losses such as L2 or L1 objectives."
 
-Given an image $x \in \mathcal{R}^{H \times \W \times 3}$, the encoder $\mathcal{E}$ encodes $x$ into a latent representation $z = \mathcal{E}(x)$ and the decoder $D$ reconstructs the image from the latent, givng $\tilde{x} = \mathcal{D}(z) = \mathcal{D}(\mathcal{E}(x))$. 
+Given an image $x \in \mathcal{R}^{H \times W \times 3}$, the encoder $\mathcal{E}$ encodes $x$ into a latent representation $z = \mathcal{E}(x)$ and the decoder $D$ reconstructs the image from the latent, giving $\bar{x} = \mathcal{D}(z) = \mathcal{D}(\mathcal{E}(x))$.
+
+
 
 
