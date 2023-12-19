@@ -37,5 +37,5 @@ This regularization typically requires a small weighting term, for example $1e^{
 The full autoencoder loss $L_{AE}$ is a linear sum of 4 different contributions and looks as follows:
 
 $$
-L_{AE} = \text{min}_{\mathcal{E} \mathcal{D}} \text{max}_{\psi} \left( L_{\text{rec}} (x, \mathcal{D}\mathcal{E}(x)) - L_{\text{adv}}(\mathcal{D}\mathcal{E}(x)) + \log D_{\psi} (x) + L_{\text{reg}} (x; \mathcal{E}, \mathcal{D}) \righ)
+L_{AE} = \text{min}_{\mathcal{E} \mathcal{D}} \text{max}_{\psi} \left( L_{\text{rec}} (x, \mathcal{D}\mathcal{E}(x)) - L_{\text{adv}}(\mathcal{D}\mathcal{E}(x)) + \log D_{\psi} (x) + L_{\text{reg}} (x; \mathcal{E}, \mathcal{D}) \right)
 $$
