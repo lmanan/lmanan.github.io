@@ -34,7 +34,7 @@ The authors mention in the supplementary section that the autoencoder is trained
 The patch based discriminator is optimized to differentiate original images from the reconstructions $\mathcal{D}(\mathcal{E}(x))$. To avoid arbitrarily scaled latent spaces, they regularize the latent to zero mean centered and have a small variance by introducing a regularizing loss term $L_{\text{reg}}$.
 
 This regularization typically requires a small weighting term, for example $1e^{-6}$.
-The full loss looks as follows:
+The full autoencoder loss $L_{AE}$ is a linear sum of 4 different contributions and looks as follows:
 
 $$
 L_{AE} = \text{min}_{\mathcal{E} \mathcal{D}} \text{max}_{\psi} \left( L_{\text{rec}} (x, \mathcal{D}\mathcal{E}(x)) - L_{\text{adv}}(\mathcal{D}\mathcal{E}(x)) + \log D_{\psi} (x) + L_{\text{reg}} (x; \mathcal{E}, \mathcal{D}) \righ)
