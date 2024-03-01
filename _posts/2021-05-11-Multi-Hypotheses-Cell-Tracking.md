@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-(From [Bragantini et al, 2023]())
+(From [Bragantini et al, 2023](https://arxiv.org/pdf/2308.04526.pdf))
 >"The proposed method computes cell tracks and segments using a hierarchy of segmentation hypotheses and selects disjoint segments by maximising the overlap between adjacent frames."
 
 If there are two available hypotheses, and one of them predicts larger structures across time while the other hypotheses predicts smaller structures across time, then the average overlap within segmentations predicted from one hypothesis should be similar, no?
